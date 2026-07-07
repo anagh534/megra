@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ASGC Project Portfolio - High quality construction showcase including stadiums, high-rises, cultural landmarks, and metro networks in Dubai.">
+  <title>Portfolio | ASGC Group</title>
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER & NAVIGATION
+       ========================================== -->
+  <header class="header subpage" id="main-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-container" id="brand-logo-link">
+        <img src="images/logo.png" alt="ASGC Group Logo" id="brand-logo">
+      </a>
+      
+      <nav class="nav-menu" id="navigation-menu">
+        <a href="index.html" class="nav-link nav-item-link">Home</a>
+        <a href="about.html" class="nav-link nav-item-link">About Us</a>
+        <a href="services.html" class="nav-link nav-item-link">Service Us</a>
+        <a href="portfolio.html" class="nav-link nav-item-link active">Portfolio</a>
+        <a href="contact.html" class="nav-link nav-item-link">Contact Us</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-nav" id="header-cta-btn">Enquire Now</a>
+        <div class="mobile-nav-toggle" id="mobile-menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SUBPAGE BANNER
+       ========================================== -->
+  <section class="page-banner" id="portfolio-banner">
+    <div class="page-banner-bg" style="background-image: url('images/hero_1.jpg');"></div>
+    <div class="container page-banner-container">
+      <h1 class="page-title">Project Showcase</h1>
+      <nav class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center; opacity: 0.5;"></i>
+        <span class="current">Portfolio</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       PORTFOLIO / PROJECTS
+       ========================================== -->
+  <section class="section portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-title-wrapper">
+        <span class="section-subtitle">Portfolio of Excellence</span>
+        <h2 class="section-title">Iconic Landmark Projects</h2>
+      </div>
+
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="culture">Culture & Education</button>
+        <button class="filter-btn" data-filter="hospitality">Hospitality & Leisure</button>
+        <button class="filter-btn" data-filter="commercial">Commercial & Res</button>
+        <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card" data-category="culture" data-id="mbr-library">
+          <div class="portfolio-card-img" style="background-image: url('images/project_1.jpg');"></div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Culture & Education</span>
+            <h3>Mohammed Bin Rashid Library</h3>
+            <div class="portfolio-location"><i class="fas fa-location-dot"></i> Dubai Creek, UAE</div>
+            <div class="portfolio-details">
+              <span>Client<strong>Dubai Municipality</strong></span>
+              <span>Year<strong>2022</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card" data-category="hospitality" data-id="cola-arena">
+          <div class="portfolio-card-img" style="background-image: url('images/project_2.jpg');"></div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Hospitality & Leisure</span>
+            <h3>Coca-Cola Arena</h3>
+            <div class="portfolio-location"><i class="fas fa-location-dot"></i> City Walk, Dubai, UAE</div>
+            <div class="portfolio-details">
+              <span>Client<strong>Meraas</strong></span>
+              <span>Year<strong>2019</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-card" data-category="commercial" data-id="expo-pavilion">
+          <div class="portfolio-card-img" style="background-image: url('images/project_3.jpg');"></div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Sustainability / Commercial</span>
+            <h3>Expo 2020 Sustainability Pavilion</h3>
+            <div class="portfolio-location"><i class="fas fa-location-dot"></i> Expo City Dubai, UAE</div>
+            <div class="portfolio-details">
+              <span>Client<strong>Expo 2020 Dubai</strong></span>
+              <span>Year<strong>2020</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-card" data-category="commercial" data-id="bluewaters">
+          <div class="portfolio-card-img" style="background-image: url('images/project_4.jpg');"></div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Commercial & Residential</span>
+            <h3>Bluewaters Residences</h3>
+            <div class="portfolio-location"><i class="fas fa-location-dot"></i> Bluewaters Island, UAE</div>
+            <div class="portfolio-details">
+              <span>Client<strong>Meraas Holding</strong></span>
+              <span>Year<strong>2018</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="portfolio-card" data-category="infrastructure" data-id="metro-expansion">
+          <div class="portfolio-card-img" style="background-image: url('images/project_5.jpg');"></div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Infrastructure & Transport</span>
+            <h3>Dubai Metro Expansion</h3>
+            <div class="portfolio-location"><i class="fas fa-location-dot"></i> Various Locations, Dubai</div>
+            <div class="portfolio-details">
+              <span>Client<strong>RTA Dubai</strong></span>
+              <span>Year<strong>2021</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="portfolio-card" data-category="culture" data-id="etihad-museum">
+          <div class="portfolio-card-img" style="background-image: url('images/project_6.jpg');"></div>
+          <div class="portfolio-overlay">
+            <span class="portfolio-tag">Culture & Education</span>
+            <h3>Etihad Museum</h3>
+            <div class="portfolio-location"><i class="fas fa-location-dot"></i> Jumeirah, Dubai, UAE</div>
+            <div class="portfolio-details">
+              <span>Client<strong>Dubai Culture</strong></span>
+              <span>Year<strong>2017</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="ASGC Group Logo" class="footer-logo" id="footer-brand-logo">
+          <p>
+            ASGC is a vertically integrated construction conglomerate based in Dubai, UAE. We deliver iconic skyscrapers, stadiums, and infrastructure setups with integrated turnkey efficiency.
+          </p>
+          <div class="social-links">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Our Company</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="services.html">Service Us</a>
+            <a href="portfolio.html">Portfolio Showcase</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4>Business Units</h4>
+          <div class="footer-links">
+            <a href="services.html#integration">ASGC Steel</a>
+            <a href="services.html#integration">ASGC Ready-Mix</a>
+            <a href="services.html#integration">MEP Services</a>
+            <a href="services.html#integration">Bespoke Fit-Out</a>
+            <a href="services.html#integration">Facade Glazing</a>
+          </div>
+        </div>
+
+        <div class="footer-newsletter">
+          <h4>Corporate Newsletter</h4>
+          <p>Subscribe to receive quarterly insights, news updates, and completed project briefs.</p>
+          <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
+            <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Email for Newsletter">
+            <button type="submit" class="newsletter-btn" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ASGC Group. All Rights Reserved. Designed with ASGC Brand Aesthetics.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms &amp; Conditions</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       PROJECT DETAIL LIGHTBOX OVERLAY
+       ========================================== -->
+  <div class="lightbox" id="project-lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+    <div class="lightbox-close" aria-label="Close Lightbox"><i class="fas fa-xmark"></i></div>
+    <div class="lightbox-content">
+      <div class="lightbox-img-box" id="lightbox-img"></div>
+      <div class="lightbox-details-box">
+        <span class="lightbox-tag" id="lightbox-tag">Commercial &amp; Residential</span>
+        <h3 id="lightbox-title">Project Name</h3>
+        <p class="lightbox-desc" id="lightbox-desc">
+          Detailed description of the landmark construction project goes here. Explaining structural design, unique constraints, and ASGC turnkey deliverables.
+        </p>
+        
+        <div class="lightbox-meta-grid">
+          <div class="lightbox-meta-item">
+            <h5>Sector</h5>
+            <p id="lightbox-sector">Residential</p>
+          </div>
+          <div class="lightbox-meta-item">
+            <h5>Client</h5>
+            <p id="lightbox-client">Developer Group</p>
+          </div>
+          <div class="lightbox-meta-item">
+            <h5>Year Completed</h5>
+            <p id="lightbox-year">2023</p>
+          </div>
+          <div class="lightbox-meta-item">
+            <h5>Location</h5>
+            <p id="lightbox-location">Dubai, UAE</p>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="btn btn-primary">Request Similar Construction Quote</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Main Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>

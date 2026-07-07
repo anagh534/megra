@@ -1,5 +1,5 @@
 /* ----------------------------------------------------
-   ASGC Group Inspired Website Stylesheet
+   ASGC Group Inspired Website Stylesheet (Multi-page)
    Color Palette based on images/logo.png:
    - Primary (Deep Green): #216536 (RGB: 33, 101, 54)
    - Secondary (Charcoal Grey): #464a4d (RGB: 70, 74, 77)
@@ -282,7 +282,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.header.scrolled {
+.header.scrolled, .header.subpage {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
@@ -290,15 +290,16 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--color-border);
 }
 
-.header.scrolled .nav-link {
+.header.scrolled .nav-link, .header.subpage .nav-link {
   color: var(--color-secondary-dark);
 }
 
-.header.scrolled .logo-container img {
-  filter: none; /* If white logo filter was applied */
+.header.scrolled .logo-container img, .header.subpage .logo-container img {
+  filter: none;
+  height: 42px;
 }
 
-.header.scrolled .btn-nav {
+.header.scrolled .btn-nav, .header.subpage .btn-nav {
   background-color: var(--color-primary);
   color: var(--color-text-white);
 }
@@ -321,10 +322,6 @@ h1, h2, h3, h4, h5, h6 {
   width: auto;
   object-fit: contain;
   transition: var(--transition-smooth);
-}
-
-.header.scrolled .logo-container img {
-  height: 42px;
 }
 
 .nav-menu {
@@ -367,11 +364,23 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
-.header.scrolled .nav-link::after {
+.nav-link.active {
+  color: var(--color-accent) !important;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+.header.scrolled .nav-link::after, .header.subpage .nav-link::after {
   background-color: var(--color-primary);
 }
 
-.header.scrolled .nav-link:hover {
+.header.scrolled .nav-link:hover, .header.subpage .nav-link:hover {
+  color: var(--color-primary) !important;
+}
+
+.header.scrolled .nav-link.active, .header.subpage .nav-link.active {
   color: var(--color-primary) !important;
 }
 
@@ -415,8 +424,65 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-smooth);
 }
 
-.header.scrolled .mobile-nav-toggle span {
+.header.scrolled span, .header.subpage span {
   background-color: var(--color-secondary-dark);
+}
+
+/* --- Subpage Banner --- */
+.page-banner {
+  height: 380px;
+  background-color: var(--color-bg-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: var(--color-text-white);
+  padding-top: 70px;
+}
+
+.page-banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  filter: grayscale(20%);
+}
+
+.page-banner-container {
+  position: relative;
+  z-index: 3;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-text-white);
+  margin-bottom: 0.75rem;
+}
+
+.breadcrumbs {
+  display: flex;
+  gap: 0.5rem;
+  font-family: var(--font-title);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.breadcrumbs a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-accent);
+}
+
+.breadcrumbs span.current {
+  color: var(--color-accent);
 }
 
 /* --- Hero Carousel --- */
@@ -679,6 +745,55 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--color-secondary-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* --- Corporate Info Box (detailed page) --- */
+.corp-info {
+  background-color: var(--color-bg-light);
+}
+
+.corp-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.corp-info-box {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+}
+
+.corp-info-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.corp-info-box h3 {
+  font-size: 1.6rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.corp-info-box h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-accent);
+}
+
+.corp-info-box p {
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
 }
 
 /* --- Sectors Section --- */
@@ -1759,7 +1874,7 @@ textarea.form-input {
     font-size: 3.5rem;
   }
   
-  .about-grid, .integration-container, .presence-grid, .contact-grid {
+  .about-grid, .integration-container, .presence-grid, .contact-grid, .corp-info-grid {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
