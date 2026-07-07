@@ -275,33 +275,15 @@ h1, h2, h3, h4, h5, h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: var(--nav-height);
+  height: 70px;
   z-index: 1000;
   transition: var(--transition-smooth);
   display: flex;
   align-items: center;
-}
-
-.header.scrolled, .header.subpage {
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: var(--shadow-sm);
   backdrop-filter: blur(10px);
-  height: 70px;
   border-bottom: 1px solid var(--color-border);
-}
-
-.header.scrolled .nav-link, .header.subpage .nav-link {
-  color: var(--color-secondary-dark);
-}
-
-.header.scrolled .logo-container img, .header.subpage .logo-container img {
-  filter: none;
-  height: 42px;
-}
-
-.header.scrolled .btn-nav, .header.subpage .btn-nav {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
 }
 
 .header-container {
@@ -314,11 +296,11 @@ h1, h2, h3, h4, h5, h6 {
 .logo-container {
   display: flex;
   align-items: center;
-  max-height: calc(var(--nav-height) - 10px);
+  max-height: 50px;
 }
 
 .logo-container img {
-  height: 50px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   transition: var(--transition-smooth);
@@ -336,9 +318,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .nav-link {
   font-family: var(--font-title);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-text-white);
+  color: var(--color-secondary-dark);
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0.5rem 0;
@@ -352,12 +334,12 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: var(--color-accent);
+  background-color: var(--color-primary);
   transition: var(--transition-fast);
 }
 
 .nav-link:hover {
-  color: var(--color-accent) !important;
+  color: var(--color-primary) !important;
 }
 
 .nav-link:hover::after {
@@ -365,23 +347,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.active {
-  color: var(--color-accent) !important;
+  color: var(--color-primary) !important;
 }
 
 .nav-link.active::after {
   width: 100%;
-}
-
-.header.scrolled .nav-link::after, .header.subpage .nav-link::after {
-  background-color: var(--color-primary);
-}
-
-.header.scrolled .nav-link:hover, .header.subpage .nav-link:hover {
-  color: var(--color-primary) !important;
-}
-
-.header.scrolled .nav-link.active, .header.subpage .nav-link.active {
-  color: var(--color-primary) !important;
 }
 
 .nav-actions {
@@ -391,18 +361,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-nav {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--color-primary);
   color: var(--color-text-white);
   padding: 0.6rem 1.4rem;
   font-size: 0.8rem;
-  backdrop-filter: blur(5px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 4px;
+  font-family: var(--font-title);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition-smooth);
 }
 
 .btn-nav:hover {
-  background-color: var(--color-accent);
-  color: var(--color-secondary-dark);
-  border-color: var(--color-accent);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-text-white);
 }
 
 /* --- Mobile Menu Button --- */
@@ -419,13 +394,9 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-nav-toggle span {
   width: 100%;
   height: 2px;
-  background-color: var(--color-text-white);
+  background-color: var(--color-secondary-dark);
   border-radius: 2px;
   transition: var(--transition-smooth);
-}
-
-.header.scrolled span, .header.subpage span {
-  background-color: var(--color-secondary-dark);
 }
 
 /* --- Subpage Banner --- */
@@ -584,15 +555,17 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.1;
   max-width: 800px;
   margin-bottom: 1.5rem;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  color: #ffffff; /* Explicitly white */
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 2px 5px rgba(0, 0, 0, 0.95);
 }
 
 .hero-desc {
   font-size: 1.15rem;
   max-width: 600px;
   margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.85);
-  font-weight: 300;
+  color: #ffffff; /* Explicitly white */
+  font-weight: 400;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
 }
 
 .hero-buttons {
