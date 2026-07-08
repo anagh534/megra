@@ -86,11 +86,11 @@
       
       /* Buttons styling */
       .btn {
-        @apply inline-flex items-center justify-center py-3.5 px-9 font-title font-semibold text-[0.95rem] uppercase tracking-wider rounded cursor-pointer relative overflow-hidden z-[1] select-none transition-smooth;
+        @apply inline-flex items-center justify-center py-3.5 px-9 font-title font-semibold text-[0.95rem] uppercase tracking-wider rounded cursor-pointer relative overflow-hidden z-[1] select-none; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .btn::before {
         content: '';
-        @apply absolute top-0 -left-full w-full h-full bg-white/10 transition-smooth z-[-1];
+        @apply absolute top-0 -left-full w-full h-full bg-white/10  z-[-1]; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .btn:hover::before {
         @apply left-0;
@@ -128,11 +128,11 @@
       }
       
       .nav-link {
-        @apply font-title font-semibold text-[0.9rem] text-white md:text-secondary-dark uppercase tracking-[1px] py-2 relative transition-fast block;
+        @apply font-title font-semibold text-[0.9rem] text-white md:text-secondary-dark uppercase tracking-[1px] py-2 relative  block; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .nav-link::after {
         content: '';
-        @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-fast;
+        @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .nav-link:hover {
         @apply text-primary;
@@ -149,7 +149,7 @@
       
       /* Mobile Menu button toggle spans */
       .mobile-nav-toggle span {
-        @apply w-full h-[2px] bg-secondary-dark rounded transition-smooth;
+        @apply w-full h-[2px] bg-secondary-dark rounded; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .mobile-nav-toggle.active span:nth-child(1) {
         @apply translate-y-[8px] rotate-45;

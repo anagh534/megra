@@ -86,11 +86,11 @@
       
       /* Buttons styling */
       .btn {
-        @apply inline-flex items-center justify-center py-3.5 px-9 font-title font-semibold text-[0.95rem] uppercase tracking-wider rounded cursor-pointer relative overflow-hidden z-[1] select-none transition-smooth;
+        @apply inline-flex items-center justify-center py-3.5 px-9 font-title font-semibold text-[0.95rem] uppercase tracking-wider rounded cursor-pointer relative overflow-hidden z-[1] select-none; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .btn::before {
         content: '';
-        @apply absolute top-0 -left-full w-full h-full bg-white/10 transition-smooth z-[-1];
+        @apply absolute top-0 -left-full w-full h-full bg-white/10  z-[-1]; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .btn:hover::before {
         @apply left-0;
@@ -128,11 +128,11 @@
       }
       
       .nav-link {
-        @apply font-title font-semibold text-[0.9rem] text-white md:text-secondary-dark uppercase tracking-[1px] py-2 relative transition-fast block;
+        @apply font-title font-semibold text-[0.9rem] text-white md:text-secondary-dark uppercase tracking-[1px] py-2 relative  block; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .nav-link::after {
         content: '';
-        @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-fast;
+        @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .nav-link:hover {
         @apply text-primary;
@@ -149,7 +149,7 @@
       
       /* Mobile Menu button toggle spans */
       .mobile-nav-toggle span {
-        @apply w-full h-[2px] bg-secondary-dark rounded transition-smooth;
+        @apply w-full h-[2px] bg-secondary-dark rounded; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .mobile-nav-toggle.active span:nth-child(1) {
         @apply translate-y-[8px] rotate-45;
@@ -175,7 +175,7 @@
       
       /* Filter buttons */
       .filter-btn {
-        @apply px-6 py-2.5 bg-bg-light border border-border text-secondary-light rounded font-title font-semibold text-[0.85rem] uppercase tracking-wider cursor-pointer transition-smooth;
+        @apply px-6 py-2.5 bg-bg-light border border-border text-secondary-light rounded font-title font-semibold text-[0.85rem] uppercase tracking-wider cursor-pointer; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .filter-btn:hover, .filter-btn.active {
         @apply bg-primary text-white border-primary shadow-sm;
@@ -183,19 +183,23 @@
       
       /* Portfolio cards transition effects */
       .portfolio-card {
-        @apply relative h-[480px] rounded-lg overflow-hidden shadow-md transition-all duration-500 ease-out opacity-100 scale-100 cursor-pointer;
+        @apply relative h-[480px] rounded-lg overflow-hidden shadow-md opacity-100 scale-100 cursor-pointer;
+        transition: opacity 0.5s ease, transform 0.5s ease, all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .portfolio-card.hidden {
+        display: block !important;
         @apply opacity-0 scale-75 absolute w-0 h-0 p-0 m-0 border-none pointer-events-none overflow-hidden;
       }
       .portfolio-card-img {
-        @apply w-full h-full bg-cover bg-center transition-transform duration-700 ease-out;
+        @apply w-full h-full bg-cover bg-center;
+        transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .portfolio-card:hover .portfolio-card-img {
         @apply scale-110;
       }
       .portfolio-overlay {
-        @apply absolute inset-0 bg-gradient-to-b from-primary/10 via-bg-dark/40 to-bg-dark/90 p-10 flex flex-col justify-end text-white transition-all duration-300 z-[2];
+        @apply absolute inset-0 bg-gradient-to-b from-primary/10 via-bg-dark/40 to-bg-dark/90 p-10 flex flex-col justify-end text-white z-[2];
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .portfolio-card:hover .portfolio-overlay {
         @apply from-primary/40 via-primary/70 to-bg-dark/95;
@@ -213,7 +217,8 @@
         @apply text-accent;
       }
       .portfolio-details {
-        @apply flex justify-between border-t border-white/20 pt-4 text-[0.8rem] uppercase tracking-wider opacity-0 translate-y-[15px] transition-all duration-300;
+        @apply flex justify-between border-t border-white/20 pt-4 text-[0.8rem] uppercase tracking-wider opacity-0 translate-y-[15px];
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .portfolio-card:hover .portfolio-details {
         @apply opacity-100 translate-y-0;
@@ -227,14 +232,17 @@
       
       /* Lightbox custom overrides */
       .lightbox {
-        @apply fixed top-0 left-0 w-screen h-screen bg-[#111512]/98 z-[2000] hidden items-center justify-center p-8 md:p-16 transition-all duration-300;
+        @apply fixed top-0 left-0 w-screen h-screen z-[2000] hidden items-center justify-center p-8 md:p-16;
+        background-color: rgba(17, 21, 18, 0.98);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         animation: fadeIn 0.4s ease;
       }
       .lightbox.active {
         @apply flex;
       }
       .lightbox-close {
-        @apply absolute top-8 right-8 w-[50px] h-[50px] rounded-full bg-white/10 text-white flex items-center justify-center cursor-pointer transition-smooth border border-white/20 text-2xl hover:bg-accent hover:text-secondary-dark hover:rotate-90;
+        @apply absolute top-8 right-8 w-[50px] h-[50px] rounded-full bg-white/10 text-white flex items-center justify-center cursor-pointer border border-white/20 text-2xl hover:bg-accent hover:text-secondary-dark hover:rotate-90;
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
       .lightbox-content {
         @apply grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] bg-white w-full max-w-[1100px] rounded-lg overflow-hidden shadow-2xl;
