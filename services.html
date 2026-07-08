@@ -6,24 +6,234 @@
   <meta name="description" content="Explore construction services and operating sectors of ASGC Group - Commercial, residential, MEP, facade, and steel turnkey contracting.">
   <title>Service Us | ASGC Group</title>
   
-  <!-- CSS Stylesheets -->
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   
   <!-- FontAwesome for Premium Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Custom Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#216536',
+              dark: '#164223',
+              light: '#2e8b4c',
+              ultraLight: '#e9f5ed',
+            },
+            secondary: {
+              DEFAULT: '#464a4d',
+              dark: '#2c2e30',
+              light: '#6a6f72',
+            },
+            accent: {
+              DEFAULT: '#d4af37',
+              light: '#e6c55c',
+              dark: '#b59328',
+            },
+            bg: {
+              light: '#f7f9f8',
+              white: '#ffffff',
+              dark: '#111512',
+              darkGray: '#1b1e1c',
+            },
+            text: {
+              main: '#2b2d2f',
+              muted: '#62676b',
+              light: '#f3f4f6',
+              white: '#ffffff',
+            },
+            border: {
+              DEFAULT: '#e0e4e2',
+              dark: '#2a312d',
+            }
+          },
+          fontFamily: {
+            title: ['Outfit', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Custom CSS for transitions and non-utility selectors -->
+  <style type="text/tailwindcss">
+    @layer base {
+      body {
+        @apply font-body text-text-main bg-bg-light leading-relaxed overflow-x-hidden;
+      }
+      h2 {
+        @apply font-title font-bold text-secondary-dark;
+      }
+    }
+    @layer utilities {
+      /* Custom transition properties */
+      .transition-smooth {
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      .transition-fast {
+        transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      
+      /* Buttons styling */
+      .btn {
+        @apply inline-flex items-center justify-center py-3.5 px-9 font-title font-semibold text-[0.95rem] uppercase tracking-wider rounded cursor-pointer relative overflow-hidden z-[1] select-none transition-smooth;
+      }
+      .btn::before {
+        content: '';
+        @apply absolute top-0 -left-full w-full h-full bg-white/10 transition-smooth z-[-1];
+      }
+      .btn:hover::before {
+        @apply left-0;
+      }
+      .btn:hover {
+        @apply -translate-y-[2px];
+      }
+      
+      .btn-primary {
+        @apply bg-primary text-white shadow-[0_4px_15px_rgba(33,101,54,0.3)] hover:bg-primary-dark hover:shadow-[0_8px_20px_rgba(33,101,54,0.4)];
+      }
+      .btn-secondary {
+        @apply bg-transparent text-white border-2 border-white hover:bg-white hover:text-secondary-dark;
+      }
+      .btn-accent {
+        @apply bg-accent text-secondary-dark shadow-[0_4px_15px_rgba(212,175,55,0.3)] hover:bg-accent-dark hover:text-white hover:shadow-[0_8px_20px_rgba(212,175,55,0.4)];
+      }
+      .btn-outline {
+        @apply bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white;
+      }
+      .btn-nav {
+        @apply bg-primary text-white px-5 py-2.5 text-[0.8rem] border border-primary hover:bg-primary-dark hover:border-primary-dark;
+      }
+      
+      .btn-icon {
+        @apply ml-2 transition-transform duration-200;
+      }
+      .btn:hover .btn-icon {
+        @apply translate-x-1;
+      }
+      
+      /* Navigation transitions and styles */
+      .header.scrolled {
+        @apply bg-white shadow-md border-b border-border h-[70px];
+      }
+      
+      .nav-link {
+        @apply font-title font-semibold text-[0.9rem] text-white md:text-secondary-dark uppercase tracking-[1px] py-2 relative transition-fast block;
+      }
+      .nav-link::after {
+        content: '';
+        @apply absolute bottom-0 left-0 w-0 h-[2px] bg-primary transition-fast;
+      }
+      .nav-link:hover {
+        @apply text-primary;
+      }
+      .nav-link:hover::after {
+        @apply w-full;
+      }
+      .nav-link.active {
+        @apply text-primary;
+      }
+      .nav-link.active::after {
+        @apply w-full;
+      }
+      
+      /* Mobile Menu button toggle spans */
+      .mobile-nav-toggle span {
+        @apply w-full h-[2px] bg-secondary-dark rounded transition-smooth;
+      }
+      .mobile-nav-toggle.active span:nth-child(1) {
+        @apply translate-y-[8px] rotate-45;
+      }
+      .mobile-nav-toggle.active span:nth-child(2) {
+        @apply opacity-0;
+      }
+      .mobile-nav-toggle.active span:nth-child(3) {
+        @apply -translate-y-[8px] -rotate-45;
+      }
+      
+      /* Section Title standard underline */
+      .section-title {
+        @apply text-[2rem] md:text-[2.5rem] font-extrabold text-secondary-dark relative inline-block pb-4 font-title uppercase;
+      }
+      .section-title::after {
+        content: '';
+        @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-[60px] h-[4px] bg-accent rounded-sm;
+      }
+      .section-title.left-aligned::after {
+        @apply left-0 translate-x-0;
+      }
+      
+      /* Sector Card hover transitions */
+      .sector-card {
+        @apply relative h-[420px] rounded-lg overflow-hidden shadow-sm cursor-pointer z-[1];
+      }
+      .sector-card-bg {
+        @apply absolute inset-0 bg-cover bg-center transition-transform duration-500 ease-out;
+      }
+      .sector-card:hover .sector-card-bg {
+        @apply scale-110;
+      }
+      .sector-card::after {
+        content: '';
+        @apply absolute inset-0 bg-gradient-to-b from-primary/10 via-secondary/40 to-bg-dark/90 transition-all duration-300 z-[1];
+      }
+      .sector-card:hover::after {
+        @apply from-primary/30 via-primary/60 to-bg-dark/95;
+      }
+      .sector-content {
+        @apply absolute bottom-0 left-0 w-full p-8 z-[2] text-white transition-all duration-300;
+      }
+      .sector-icon {
+        @apply w-[50px] h-[50px] bg-accent text-secondary-dark rounded-full flex items-center justify-center mb-6 text-xl transition-all duration-300;
+      }
+      .sector-card:hover .sector-icon {
+        @apply bg-white text-primary rotate-[360deg];
+      }
+      .sector-card h3 {
+        @apply text-white text-[1.4rem] font-bold mb-3 font-title;
+      }
+      .sector-desc {
+        @apply text-[0.88rem] text-white/80 h-0 opacity-0 overflow-hidden transition-all duration-300;
+      }
+      .sector-card:hover .sector-desc {
+        @apply h-auto opacity-100 mt-2;
+      }
+    }
+    
+    /* Scrollbar styling */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      @apply bg-bg-light;
+    }
+    ::-webkit-scrollbar-thumb {
+      @apply bg-secondary-light/60 rounded border-2 border-bg-light hover:bg-primary;
+    }
+  </style>
 </head>
 <body>
 
   <!-- ==========================================
        HEADER & NAVIGATION
        ========================================== -->
-  <header class="header subpage" id="main-header">
-    <div class="container header-container">
-      <a href="index.html" class="logo-container" id="brand-logo-link">
-        <img src="images/logo.png" alt="ASGC Group Logo" id="brand-logo">
+  <header class="header subpage fixed top-0 left-0 w-full h-[70px] z-[1000] flex items-center bg-white/95 shadow-sm backdrop-blur-md border-b border-border transition-smooth" id="main-header">
+    <div class="w-full max-w-[1280px] mx-auto px-8 flex items-center justify-between">
+      <a href="index.html" class="flex items-center max-h-[50px]" id="brand-logo-link">
+        <img src="images/logo.png" alt="ASGC Group Logo" class="h-[42px] w-auto object-contain transition-smooth" id="brand-logo">
       </a>
       
-      <nav class="nav-menu" id="navigation-menu">
+      <nav class="nav-menu flex items-center gap-8 md:flex-row md:static md:w-auto md:h-auto md:bg-transparent md:gap-8 fixed top-[70px] left-[-100%] w-full h-[calc(100vh-70px)] bg-bg-darkGray flex-col justify-center transition-smooth z-[999]" id="navigation-menu">
         <a href="index.html" class="nav-link nav-item-link">Home</a>
         <a href="about.html" class="nav-link nav-item-link">About Us</a>
         <a href="services.html" class="nav-link nav-item-link active">Service Us</a>
@@ -31,9 +241,9 @@
         <a href="contact.html" class="nav-link nav-item-link">Contact Us</a>
       </nav>
 
-      <div class="nav-actions">
-        <a href="contact.html" class="btn btn-nav" id="header-cta-btn">Enquire Now</a>
-        <div class="mobile-nav-toggle" id="mobile-menu-trigger">
+      <div class="flex items-center gap-6">
+        <a href="contact.html" class="btn btn-nav btn-primary max-md:hidden" id="header-cta-btn">Enquire Now</a>
+        <div class="mobile-nav-toggle hidden max-md:flex flex-col justify-between w-[26px] h-[18px] cursor-pointer z-[1001]" id="mobile-menu-trigger">
           <span></span>
           <span></span>
           <span></span>
@@ -45,14 +255,14 @@
   <!-- ==========================================
        SUBPAGE BANNER
        ========================================== -->
-  <section class="page-banner" id="services-banner">
-    <div class="page-banner-bg" style="background-image: url('images/hero_2.jpg');"></div>
-    <div class="container page-banner-container">
-      <h1 class="page-title">Services &amp; Sectors</h1>
-      <nav class="breadcrumbs">
-        <a href="index.html">Home</a>
-        <i class="fas fa-chevron-right" style="font-size: 0.75rem; align-self: center; opacity: 0.5;"></i>
-        <span class="current">Service Us</span>
+  <section class="h-[380px] bg-bg-dark relative flex items-center overflow-hidden text-white pt-[70px]" id="services-banner">
+    <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-25 filter grayscale-[20%] page-banner-bg" style="background-image: url('images/hero_2.jpg');"></div>
+    <div class="w-full max-w-[1280px] mx-auto px-8 relative z-[3]">
+      <h1 class="text-[2.5rem] md:text-[3.5rem] font-extrabold text-white mb-3 font-title">Services &amp; Sectors</h1>
+      <nav class="flex gap-2 font-title text-[0.9rem] uppercase tracking-wider">
+        <a href="index.html" class="text-white/60 hover:text-accent">Home</a>
+        <i class="fas fa-chevron-right text-white/50 text-[0.75rem] self-center opacity-50"></i>
+        <span class="text-accent">Service Us</span>
       </nav>
     </div>
   </section>
@@ -60,14 +270,14 @@
   <!-- ==========================================
        CORE SECTORS
        ========================================== -->
-  <section class="section sectors" id="sectors">
-    <div class="container">
-      <div class="section-title-wrapper">
-        <span class="section-subtitle">Operating Segments</span>
+  <section class="py-20 md:py-32 bg-bg-light" id="sectors">
+    <div class="w-full max-w-[1280px] mx-auto px-8">
+      <div class="mb-14 text-center relative">
+        <span class="font-title text-primary text-[0.9rem] font-bold uppercase tracking-[3px] mb-3 inline-block">Operating Segments</span>
         <h2 class="section-title">Diverse Sectors We Serve</h2>
       </div>
       
-      <div class="sectors-grid">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
         <!-- Sector 1 -->
         <div class="sector-card">
           <div class="sector-card-bg" style="background-image: url('images/sector_1.jpg');"></div>
@@ -124,61 +334,61 @@
   <!-- ==========================================
        SUPPLY CHAIN / VERTICAL INTEGRATION
        ========================================== -->
-  <section class="section integration" id="integration">
-    <div class="container">
-      <div class="integration-container">
-        <div class="integration-intro">
-          <div class="section-title-wrapper left-aligned">
-            <span class="section-subtitle">Vertical Integration</span>
-            <h2 class="section-title left-aligned">How We Manage the Supply Chain</h2>
+  <section class="py-20 md:py-32 bg-bg-dark text-text-light relative overflow-hidden after:content-[''] after:absolute after:-top-[10%] after:-right-[10%] after:w-[400px] after:h-[400px] after:bg-primary after:blur-[150px] after:opacity-15 after:rounded-full after:pointer-events-none" id="integration">
+    <div class="w-full max-w-[1280px] mx-auto px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-12 lg:gap-20 items-center">
+        <div>
+          <div class="mb-14 text-left relative">
+            <span class="font-title text-primary text-[0.9rem] font-bold uppercase tracking-[3px] mb-3 inline-block">Vertical Integration</span>
+            <h2 class="section-title left-aligned !text-white">How We Manage the Supply Chain</h2>
           </div>
-          <p>
+          <p class="text-white/70 mb-6 text-[1.05rem] leading-relaxed">
             By controlling a large portion of our supply chain through key in-house subsidiaries, ASGC manages and mitigates typical construction delays, logistics risks, and resource shortfalls.
           </p>
-          <p>
+          <p class="text-white/70 mb-6 text-[1.05rem] leading-relaxed">
             Our structural steel, ready-mix concrete, block manufacturing, high-performance facade glazing, and MEP specialists work cohesively under a unified corporate team.
           </p>
-          <p>
+          <p class="text-white/70 mb-0 text-[1.05rem] leading-relaxed">
             This structure yields maximum reliability, higher speed, and robust quality assurances for developers.
           </p>
         </div>
 
-        <div class="integration-flow">
-          <div class="integration-flow-line"></div>
+        <div class="relative flex flex-col gap-8">
+          <div class="absolute top-[40px] left-[30px] bottom-[40px] w-[2px] bg-gradient-to-b from-primary to-accent z-[1]"></div>
           
           <!-- Step 1 -->
-          <div class="integration-step">
-            <div class="integration-number">01</div>
-            <div class="integration-step-content">
-              <h4>Design &amp; BIM Engineering</h4>
-              <p>Utilizing high-end Building Information Modeling (BIM) to plan, coordinate, and execute structure parameters before ground-breaking.</p>
+          <div class="group flex gap-8 relative z-[2]">
+            <div class="w-[60px] h-[60px] rounded-full bg-bg-darkGray border-2 border-primary text-accent flex items-center justify-center font-title font-bold text-lg flex-shrink-0 shadow-[0_0_15px_rgba(33,101,54,0.3)] transition-all duration-400 group-hover:bg-primary group-hover:text-white group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">01</div>
+            <div class="bg-white/[0.03] border border-white/[0.05] rounded-md p-7 flex-grow transition-all duration-400 group-hover:bg-white/[0.06] group-hover:border-accent/20 group-hover:translate-x-2.5">
+              <h4 class="text-white text-lg font-semibold mb-2 font-title">Design &amp; BIM Engineering</h4>
+              <p class="text-[0.9rem] text-white/60 mb-0">Utilizing high-end Building Information Modeling (BIM) to plan, coordinate, and execute structure parameters before ground-breaking.</p>
             </div>
           </div>
 
           <!-- Step 2 -->
-          <div class="integration-step">
-            <div class="integration-number">02</div>
-            <div class="integration-step-content">
-              <h4>Materials Manufacturing</h4>
-              <p>Production of structural steel (ASGC Steel), high-grade ready-mix concrete, pre-cast panels, and concrete block masonry in-house.</p>
+          <div class="group flex gap-8 relative z-[2]">
+            <div class="w-[60px] h-[60px] rounded-full bg-bg-darkGray border-2 border-primary text-accent flex items-center justify-center font-title font-bold text-lg flex-shrink-0 shadow-[0_0_15px_rgba(33,101,54,0.3)] transition-all duration-400 group-hover:bg-primary group-hover:text-white group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">02</div>
+            <div class="bg-white/[0.03] border border-white/[0.05] rounded-md p-7 flex-grow transition-all duration-400 group-hover:bg-white/[0.06] group-hover:border-accent/20 group-hover:translate-x-2.5">
+              <h4 class="text-white text-lg font-semibold mb-2 font-title">Materials Manufacturing</h4>
+              <p class="text-[0.9rem] text-white/60 mb-0">Production of structural steel (ASGC Steel), high-grade ready-mix concrete, pre-cast panels, and concrete block masonry in-house.</p>
             </div>
           </div>
 
           <!-- Step 3 -->
-          <div class="integration-step">
-            <div class="integration-number">03</div>
-            <div class="integration-step-content">
-              <h4>Glazing &amp; Specialized MEP</h4>
-              <p>Custom engineering of high-performance glass facades and specialized MEP installation by fully owned expert subsidiaries.</p>
+          <div class="group flex gap-8 relative z-[2]">
+            <div class="w-[60px] h-[60px] rounded-full bg-bg-darkGray border-2 border-primary text-accent flex items-center justify-center font-title font-bold text-lg flex-shrink-0 shadow-[0_0_15px_rgba(33,101,54,0.3)] transition-all duration-400 group-hover:bg-primary group-hover:text-white group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">03</div>
+            <div class="bg-white/[0.03] border border-white/[0.05] rounded-md p-7 flex-grow transition-all duration-400 group-hover:bg-white/[0.06] group-hover:border-accent/20 group-hover:translate-x-2.5">
+              <h4 class="text-white text-lg font-semibold mb-2 font-title">Glazing &amp; Specialized MEP</h4>
+              <p class="text-[0.9rem] text-white/60 mb-0">Custom engineering of high-performance glass facades and specialized MEP installation by fully owned expert subsidiaries.</p>
             </div>
           </div>
 
           <!-- Step 4 -->
-          <div class="integration-step">
-            <div class="integration-number">04</div>
-            <div class="integration-step-content">
-              <h4>Turnkey Delivery &amp; Management</h4>
-              <p>Project coordination, construction site assembly, fit-out detailing, and project financing solutions rolled into one turnkey delivery.</p>
+          <div class="group flex gap-8 relative z-[2]">
+            <div class="w-[60px] h-[60px] rounded-full bg-bg-darkGray border-2 border-primary text-accent flex items-center justify-center font-title font-bold text-lg flex-shrink-0 shadow-[0_0_15px_rgba(33,101,54,0.3)] transition-all duration-400 group-hover:bg-primary group-hover:text-white group-hover:border-accent group-hover:shadow-[0_0_25px_rgba(212,175,55,0.4)]">04</div>
+            <div class="bg-white/[0.03] border border-white/[0.05] rounded-md p-7 flex-grow transition-all duration-400 group-hover:bg-white/[0.06] group-hover:border-accent/20 group-hover:translate-x-2.5">
+              <h4 class="text-white text-lg font-semibold mb-2 font-title">Turnkey Delivery &amp; Management</h4>
+              <p class="text-[0.9rem] text-white/60 mb-0">Project coordination, construction site assembly, fit-out detailing, and project financing solutions rolled into one turnkey delivery.</p>
             </div>
           </div>
         </div>
@@ -189,59 +399,59 @@
   <!-- ==========================================
        FOOTER
        ========================================== -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <img src="images/logo.png" alt="ASGC Group Logo" class="footer-logo" id="footer-brand-logo">
-          <p>
+  <footer class="bg-bg-dark text-text-light pt-24 pb-8 border-t-4 border-accent">
+    <div class="w-full max-w-[1280px] mx-auto px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.5fr] gap-16 mb-20">
+        <div>
+          <img src="images/logo.png" alt="ASGC Group Logo" class="h-12 w-auto" id="footer-brand-logo">
+          <p class="text-white/60 mt-6 mb-8 text-[0.95rem] leading-relaxed">
             ASGC is a vertically integrated construction conglomerate based in Dubai, UAE. We deliver iconic skyscrapers, stadiums, and infrastructure setups with integrated turnkey efficiency.
           </p>
-          <div class="social-links">
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <div class="flex gap-4">
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
 
-        <div class="footer-links-col">
-          <h4>Our Company</h4>
-          <div class="footer-links">
-            <a href="about.html">About Us</a>
-            <a href="services.html">Service Us</a>
-            <a href="portfolio.html">Portfolio Showcase</a>
-            <a href="contact.html">Contact Us</a>
+        <div>
+          <h4 class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">Our Company</h4>
+          <div class="flex flex-col gap-4">
+            <a href="about.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">About Us</a>
+            <a href="services.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Service Us</a>
+            <a href="portfolio.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Portfolio Showcase</a>
+            <a href="contact.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Contact Us</a>
           </div>
         </div>
 
-        <div class="footer-links-col">
-          <h4>Business Units</h4>
-          <div class="footer-links">
-            <a href="services.html#integration">ASGC Steel</a>
-            <a href="services.html#integration">ASGC Ready-Mix</a>
-            <a href="services.html#integration">MEP Services</a>
-            <a href="services.html#integration">Bespoke Fit-Out</a>
-            <a href="services.html#integration">Facade Glazing</a>
+        <div>
+          <h4 class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">Business Units</h4>
+          <div class="flex flex-col gap-4">
+            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">ASGC Steel</a>
+            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">ASGC Ready-Mix</a>
+            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">MEP Services</a>
+            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Bespoke Fit-Out</a>
+            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Facade Glazing</a>
           </div>
         </div>
 
-        <div class="footer-newsletter">
-          <h4>Corporate Newsletter</h4>
-          <p>Subscribe to receive quarterly insights, news updates, and completed project briefs.</p>
-          <form class="newsletter-form" action="#" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
-            <input type="email" class="newsletter-input" placeholder="Your Email Address" required aria-label="Email for Newsletter">
-            <button type="submit" class="newsletter-btn" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+        <div>
+          <h4 class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">Corporate Newsletter</h4>
+          <p class="text-white/60 text-[0.92rem] mb-6 leading-relaxed">Subscribe to receive quarterly insights, news updates, and completed project briefs.</p>
+          <form class="flex rounded overflow-hidden border border-white/10" action="#" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
+            <input type="email" class="flex-grow bg-white/[0.03] px-5 py-3 text-white text-[0.9rem] outline-none placeholder:text-white/30" placeholder="Your Email Address" required aria-label="Email for Newsletter">
+            <button type="submit" class="bg-primary text-white px-6 transition-colors duration-200 hover:bg-primary-light flex items-center justify-center" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
           </form>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>&copy; 2026 ASGC Group. All Rights Reserved. Designed with ASGC Brand Aesthetics.</p>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms &amp; Conditions</a>
-          <a href="#">Sitemap</a>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+        <p class="text-[0.85rem] text-white/50">&copy; 2026 ASGC Group. All Rights Reserved. Designed with ASGC Brand Aesthetics.</p>
+        <div class="flex gap-8">
+          <a href="#" class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Privacy Policy</a>
+          <a href="#" class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Terms &amp; Conditions</a>
+          <a href="#" class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Sitemap</a>
         </div>
       </div>
     </div>
