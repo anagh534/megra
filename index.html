@@ -1,74 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Megra - Leading construction conglomerate in Dubai, UAE specializing in turnkey solutions, infrastructure, hospitality, and residential landmarks.">
-  <meta name="keywords" content="Megra, Construction UAE, Dubai construction, turnkey solutions, building contracting, MEP services, steel manufacturing">
-  <title>Megra | Premier Turnkey Construction Conglomerate</title>
-  
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome for Premium Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Tailwind CSS Play CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  
-  <!-- Tailwind Custom Configuration -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: {
-              DEFAULT: '#216536',
-              dark: '#164223',
-              light: '#2e8b4c',
-              ultraLight: '#e9f5ed',
-            },
-            secondary: {
-              DEFAULT: '#464a4d',
-              dark: '#2c2e30',
-              light: '#6a6f72',
-            },
-            accent: {
-              DEFAULT: '#d4af37',
-              light: '#e6c55c',
-              dark: '#b59328',
-            },
-            bg: {
-              light: '#f7f9f8',
-              white: '#ffffff',
-              dark: '#111512',
-              darkGray: '#1b1e1c',
-            },
-            text: {
-              main: '#2b2d2f',
-              muted: '#62676b',
-              light: '#f3f4f6',
-              white: '#ffffff',
-            },
-            border: {
-              DEFAULT: '#e0e4e2',
-              dark: '#2a312d',
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Megra - Leading construction conglomerate in Dubai, UAE specializing in turnkey solutions, infrastructure, hospitality, and residential landmarks.">
+    <meta name="keywords"
+        content="Megra, Construction UAE, Dubai construction, turnkey solutions, building contracting, MEP services, steel manufacturing">
+    <title>Megra | Premier Turnkey Construction Conglomerate</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Custom Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#216536',
+                            dark: '#164223',
+                            light: '#2e8b4c',
+                            ultraLight: '#e9f5ed',
+                        },
+                        secondary: {
+                            DEFAULT: '#464a4d',
+                            dark: '#2c2e30',
+                            light: '#6a6f72',
+                        },
+                        accent: {
+                            DEFAULT: '#d4af37',
+                            light: '#e6c55c',
+                            dark: '#b59328',
+                        },
+                        bg: {
+                            light: '#f7f9f8',
+                            white: '#ffffff',
+                            dark: '#111512',
+                            darkGray: '#1b1e1c',
+                        },
+                        text: {
+                            main: '#2b2d2f',
+                            muted: '#62676b',
+                            light: '#f3f4f6',
+                            white: '#ffffff',
+                        },
+                        border: {
+                            DEFAULT: '#e0e4e2',
+                            dark: '#2a312d',
+                        }
+                    },
+                    fontFamily: {
+                        title: ['Outfit', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
             }
-          },
-          fontFamily: {
-            title: ['Outfit', 'sans-serif'],
-            body: ['Inter', 'sans-serif'],
-          }
         }
-      }
-    }
-  </script>
-  
-  <!-- Custom CSS for transitions and non-utility selectors -->
-  <style type="text/tailwindcss">
-    @layer base {
+    </script>
+
+    <!-- Custom CSS for transitions and non-utility selectors -->
+    <style type="text/tailwindcss">
+        @layer base {
       body {
         @apply font-body text-text-main bg-bg-light leading-relaxed overflow-x-hidden;
       }
@@ -215,225 +220,356 @@
     }
   </style>
 </head>
+
 <body>
 
-  <!-- ==========================================
+    <!-- ==========================================
        HEADER & NAVIGATION
        ========================================== -->
-  <header class="header fixed top-0 left-0 w-full h-[70px] z-[1000] flex items-center bg-white/95 shadow-sm backdrop-blur-md border-b border-border transition-smooth" id="main-header">
-    <div class="w-full max-w-[1280px] mx-auto px-8 flex items-center justify-between">
-      <a href="index.html" class="flex items-center max-h-[50px]" id="brand-logo-link">
-        <img src="images/logo.png" alt="Megra Logo" class="h-[42px] w-auto object-contain transition-smooth" id="brand-logo">
-      </a>
-      
-      <nav class="nav-menu flex items-center gap-8 md:flex-row md:static md:w-auto md:h-auto md:bg-transparent md:gap-8 fixed top-[70px] left-[-100%] w-full h-[calc(100vh-70px)] bg-bg-darkGray flex-col justify-center transition-smooth z-[999]" id="navigation-menu">
-        <a href="index.html" class="nav-link nav-item-link active">Home</a>
-        <a href="about.html" class="nav-link nav-item-link">About Us</a>
-        <a href="services.html" class="nav-link nav-item-link">Services & Expertise</a>
-        <a href="portfolio.html" class="nav-link nav-item-link">Projects</a>
-        <a href="contact.html" class="nav-link nav-item-link">Contact Us</a>
-      </nav>
+    <header
+        class="header fixed top-0 left-0 w-full h-[70px] z-[1000] flex items-center bg-white/95 shadow-sm backdrop-blur-md border-b border-border transition-smooth"
+        id="main-header">
+        <div class="w-full max-w-[1280px] mx-auto px-8 flex items-center justify-between">
+            <a href="index.html" class="flex items-center max-h-[50px]" id="brand-logo-link">
+                <img src="images/logo.png" alt="Megra Logo" class="h-[42px] w-auto object-contain transition-smooth"
+                    id="brand-logo">
+            </a>
 
-      <div class="flex items-center gap-6">
-        <a href="contact.html" class="btn btn-nav btn-primary max-md:hidden" id="header-cta-btn">Enquire Now</a>
-        <div class="mobile-nav-toggle hidden max-md:flex flex-col justify-between w-[26px] h-[18px] cursor-pointer z-[1001]" id="mobile-menu-trigger">
-          <span></span>
-          <span></span>
-          <span></span>
+            <nav class="nav-menu flex items-center gap-8 md:flex-row md:static md:w-auto md:h-auto md:bg-transparent md:gap-8 fixed top-[70px] left-[-100%] w-full h-[calc(100vh-70px)] bg-bg-darkGray flex-col justify-center transition-smooth z-[999]"
+                id="navigation-menu">
+                <a href="index.html" class="nav-link nav-item-link active">Home</a>
+                <a href="about.html" class="nav-link nav-item-link">About Us</a>
+                <a href="services.html" class="nav-link nav-item-link">Services & Expertise</a>
+                <a href="portfolio.html" class="nav-link nav-item-link">Projects</a>
+                <a href="contact.html" class="nav-link nav-item-link">Contact Us</a>
+            </nav>
+
+            <div class="flex items-center gap-6">
+                <a href="contact.html" class="btn btn-nav btn-primary max-md:hidden" id="header-cta-btn">Enquire Now</a>
+                <div class="mobile-nav-toggle hidden max-md:flex flex-col justify-between w-[26px] h-[18px] cursor-pointer z-[1001]"
+                    id="mobile-menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- ==========================================
+    <!-- ==========================================
        HERO CAROUSEL / SLIDER
        ========================================== -->
-  <section class="relative h-screen w-screen overflow-hidden bg-bg-dark" id="hero">
-    <div class="relative w-full h-full">
-      <!-- Slide 1 -->
-      <div class="hero-slide absolute top-0 left-0 w-full h-full opacity-0 invisible transition-all duration-[1200ms] ease-in-out z-[1] active">
-        <div class="hero-slide-bg absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-100" style="background-image: url('images/hero_1.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#111512]/60 via-[#111512]/40 to-[#111512]/85 z-[2]"></div>
-        <div class="container absolute bottom-[15%] left-0 right-0 w-full max-w-[1280px] mx-auto px-8 z-[3] text-white opacity-0 translate-y-[50px] transition-all duration-[1000ms] cubic-bezier(0.16, 1, 0.3, 1) delay-500 hero-slide-content">
-          <span class="font-title text-accent font-bold text-[1rem] uppercase tracking-[4px] mb-4 block">Welcome to Megra</span>
-          <h1 class="font-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-extrabold leading-[1.1] max-w-[800px] mb-6 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.85)]">Building Landmark Infrastructures Since 1989</h1>
-          <p class="text-[1rem] md:text-[1.15rem] max-w-[600px] mb-10 text-white font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">We deliver premium turnkey construction solutions that shape cities and redefine skylines across the globe.</p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
-            <a href="portfolio.html" class="btn btn-accent w-full sm:w-auto">Explore Showcase <i class="fas fa-arrow-right btn-icon"></i></a>
-            <a href="about.html" class="btn btn-secondary w-full sm:w-auto">Our Profile</a>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Slide 2 -->
-      <div class="hero-slide absolute top-0 left-0 w-full h-full opacity-0 invisible transition-all duration-[1200ms] ease-in-out z-[1]">
-        <div class="hero-slide-bg absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-100" style="background-image: url('images/hero_2.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#111512]/60 via-[#111512]/40 to-[#111512]/85 z-[2]"></div>
-        <div class="container absolute bottom-[15%] left-0 right-0 w-full max-w-[1280px] mx-auto px-8 z-[3] text-white opacity-0 translate-y-[50px] transition-all duration-[1000ms] cubic-bezier(0.16, 1, 0.3, 1) delay-500 hero-slide-content">
-          <span class="font-title text-accent font-bold text-[1rem] uppercase tracking-[4px] mb-4 block">Iconic Stadiums & Arenas</span>
-          <h1 class="font-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-extrabold leading-[1.1] max-w-[800px] mb-6 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.85)]">World-Class Entertainment Spaces</h1>
-          <p class="text-[1rem] md:text-[1.15rem] max-w-[600px] mb-10 text-white font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">From massive structural steel roofs to dynamic LED facades, we build premium social & entertainment infrastructure.</p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
-            <a href="portfolio.html" class="btn btn-accent w-full sm:w-auto">View Projects <i class="fas fa-arrow-right btn-icon"></i></a>
-            <a href="services.html" class="btn btn-secondary w-full sm:w-auto">Services Offered</a>
-          </div>
-        </div>
-      </div>
+    <section class="relative h-screen w-screen overflow-hidden bg-bg-dark" id="hero">
+        <div class="relative w-full h-full">
+            <!-- Slide 1 -->
+            <div
+                class="hero-slide absolute top-0 left-0 w-full h-full opacity-0 invisible transition-all duration-[1200ms] ease-in-out z-[1] active">
+                <div class="hero-slide-bg absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-100"
+                    style="background-image: url('images/hero_1.jpg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#111512]/60 via-[#111512]/40 to-[#111512]/85 z-[2]">
+                </div>
+                <div
+                    class="container absolute bottom-[15%] left-0 right-0 w-full max-w-[1280px] mx-auto px-8 z-[3] text-white opacity-0 translate-y-[50px] transition-all duration-[1000ms] cubic-bezier(0.16, 1, 0.3, 1) delay-500 hero-slide-content">
+                    <span
+                        class="font-title text-accent font-bold text-[1rem] uppercase tracking-[4px] mb-4 block">Welcome
+                        to Megra</span>
+                    <h1
+                        class="font-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-extrabold leading-[1.1] max-w-[800px] mb-6 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.85)]">
+                        Building Landmark Infrastructures Since 1989</h1>
+                    <p
+                        class="text-[1rem] md:text-[1.15rem] max-w-[600px] mb-10 text-white font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                        We deliver premium turnkey construction solutions that shape cities and redefine skylines across
+                        the globe.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
+                        <a href="portfolio.html" class="btn btn-accent w-full sm:w-auto">Explore Showcase <i
+                                class="fas fa-arrow-right btn-icon"></i></a>
+                        <a href="about.html" class="btn btn-secondary w-full sm:w-auto">Our Profile</a>
+                    </div>
+                </div>
+            </div>
 
-      <!-- Slide 3 -->
-      <div class="hero-slide absolute top-0 left-0 w-full h-full opacity-0 invisible transition-all duration-[1200ms] ease-in-out z-[1]">
-        <div class="hero-slide-bg absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-100" style="background-image: url('images/hero_3.jpg');"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-[#111512]/60 via-[#111512]/40 to-[#111512]/85 z-[2]"></div>
-        <div class="container absolute bottom-[15%] left-0 right-0 w-full max-w-[1280px] mx-auto px-8 z-[3] text-white opacity-0 translate-y-[50px] transition-all duration-[1000ms] cubic-bezier(0.16, 1, 0.3, 1) delay-500 hero-slide-content">
-          <span class="font-title text-accent font-bold text-[1rem] uppercase tracking-[4px] mb-4 block">Culture & Knowledge hubs</span>
-          <h1 class="font-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-extrabold leading-[1.1] max-w-[800px] mb-6 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.85)]">Shaping Architectural Masterpieces</h1>
-          <p class="text-[1rem] md:text-[1.15rem] max-w-[600px] mb-10 text-white font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">We combine sustainable designs and complex engineering to construct beautiful hubs of culture and education.</p>
-          <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
-            <a href="portfolio.html" class="btn btn-accent w-full sm:w-auto">View Landmarks <i class="fas fa-arrow-right btn-icon"></i></a>
-            <a href="about.html#sustainability" class="btn btn-secondary w-full sm:w-auto">Green Building</a>
-          </div>
+            <!-- Slide 2 -->
+            <div
+                class="hero-slide absolute top-0 left-0 w-full h-full opacity-0 invisible transition-all duration-[1200ms] ease-in-out z-[1]">
+                <div class="hero-slide-bg absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-100"
+                    style="background-image: url('images/hero_2.jpg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#111512]/60 via-[#111512]/40 to-[#111512]/85 z-[2]">
+                </div>
+                <div
+                    class="container absolute bottom-[15%] left-0 right-0 w-full max-w-[1280px] mx-auto px-8 z-[3] text-white opacity-0 translate-y-[50px] transition-all duration-[1000ms] cubic-bezier(0.16, 1, 0.3, 1) delay-500 hero-slide-content">
+                    <span
+                        class="font-title text-accent font-bold text-[1rem] uppercase tracking-[4px] mb-4 block">Iconic
+                        Stadiums & Arenas</span>
+                    <h1
+                        class="font-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-extrabold leading-[1.1] max-w-[800px] mb-6 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.85)]">
+                        World-Class Entertainment Spaces</h1>
+                    <p
+                        class="text-[1rem] md:text-[1.15rem] max-w-[600px] mb-10 text-white font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                        From massive structural steel roofs to dynamic LED facades, we build premium social &
+                        entertainment infrastructure.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
+                        <a href="portfolio.html" class="btn btn-accent w-full sm:w-auto">View Projects <i
+                                class="fas fa-arrow-right btn-icon"></i></a>
+                        <a href="services.html" class="btn btn-secondary w-full sm:w-auto">Services Offered</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div
+                class="hero-slide absolute top-0 left-0 w-full h-full opacity-0 invisible transition-all duration-[1200ms] ease-in-out z-[1]">
+                <div class="hero-slide-bg absolute top-0 left-0 w-full h-full bg-cover bg-center transition-transform duration-[10000ms] ease-out scale-100"
+                    style="background-image: url('images/hero_3.jpg');"></div>
+                <div class="absolute inset-0 bg-gradient-to-b from-[#111512]/60 via-[#111512]/40 to-[#111512]/85 z-[2]">
+                </div>
+                <div
+                    class="container absolute bottom-[15%] left-0 right-0 w-full max-w-[1280px] mx-auto px-8 z-[3] text-white opacity-0 translate-y-[50px] transition-all duration-[1000ms] cubic-bezier(0.16, 1, 0.3, 1) delay-500 hero-slide-content">
+                    <span
+                        class="font-title text-accent font-bold text-[1rem] uppercase tracking-[4px] mb-4 block">Culture
+                        & Knowledge hubs</span>
+                    <h1
+                        class="font-title text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] font-extrabold leading-[1.1] max-w-[800px] mb-6 text-white drop-shadow-[0_10px_30px_rgba(0,0,0,0.85)]">
+                        Shaping Architectural Masterpieces</h1>
+                    <p
+                        class="text-[1rem] md:text-[1.15rem] max-w-[600px] mb-10 text-white font-normal drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+                        We combine sustainable designs and complex engineering to construct beautiful hubs of culture
+                        and education.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto px-6 sm:px-0">
+                        <a href="portfolio.html" class="btn btn-accent w-full sm:w-auto">View Landmarks <i
+                                class="fas fa-arrow-right btn-icon"></i></a>
+                        <a href="about.html#sustainability" class="btn btn-secondary w-full sm:w-auto">Green
+                            Building</a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
 
-    <!-- Controls -->
-    <div class="absolute bottom-[50px] left-[5%] right-[5%] md:left-auto md:right-[5%] z-10 flex flex-row items-center justify-between md:justify-end gap-8" id="hero-controls">
-      <div class="flex gap-3 hero-indicators">
-        <div class="w-[40px] h-[3px] bg-white/30 cursor-pointer relative transition-all duration-300 hover:bg-white/50 hero-indicator active"><div class="absolute top-0 left-0 h-full w-0 bg-primary hero-indicator-progress"></div></div>
-        <div class="w-[40px] h-[3px] bg-white/30 cursor-pointer relative transition-all duration-300 hover:bg-white/50 hero-indicator"><div class="absolute top-0 left-0 h-full w-0 bg-primary hero-indicator-progress"></div></div>
-        <div class="w-[40px] h-[3px] bg-white/30 cursor-pointer relative transition-all duration-300 hover:bg-white/50 hero-indicator"><div class="absolute top-0 left-0 h-full w-0 bg-primary hero-indicator-progress"></div></div>
-      </div>
-      <div class="flex gap-4">
-        <button class="w-[50px] h-[50px] rounded-full border border-white/20 bg-white/5 text-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-accent hover:text-secondary-dark hover:border-accent hero-arrow-btn prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
-        <button class="w-[50px] h-[50px] rounded-full border border-white/20 bg-white/5 text-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-accent hover:text-secondary-dark hover:border-accent hero-arrow-btn next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
+        <!-- Controls -->
+        <div class="absolute bottom-[50px] left-[5%] right-[5%] md:left-auto md:right-[5%] z-10 flex flex-row items-center justify-between md:justify-end gap-8"
+            id="hero-controls">
+            <div class="flex gap-3 hero-indicators">
+                <div
+                    class="w-[40px] h-[3px] bg-white/30 cursor-pointer relative transition-all duration-300 hover:bg-white/50 hero-indicator active">
+                    <div class="absolute top-0 left-0 h-full w-0 bg-primary hero-indicator-progress"></div>
+                </div>
+                <div
+                    class="w-[40px] h-[3px] bg-white/30 cursor-pointer relative transition-all duration-300 hover:bg-white/50 hero-indicator">
+                    <div class="absolute top-0 left-0 h-full w-0 bg-primary hero-indicator-progress"></div>
+                </div>
+                <div
+                    class="w-[40px] h-[3px] bg-white/30 cursor-pointer relative transition-all duration-300 hover:bg-white/50 hero-indicator">
+                    <div class="absolute top-0 left-0 h-full w-0 bg-primary hero-indicator-progress"></div>
+                </div>
+            </div>
+            <div class="flex gap-4">
+                <button
+                    class="w-[50px] h-[50px] rounded-full border border-white/20 bg-white/5 text-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-accent hover:text-secondary-dark hover:border-accent hero-arrow-btn prev"
+                    aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+                <button
+                    class="w-[50px] h-[50px] rounded-full border border-white/20 bg-white/5 text-white flex items-center justify-center cursor-pointer transition-all duration-300 hover:bg-accent hover:text-secondary-dark hover:border-accent hero-arrow-btn next"
+                    aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
 
-  <!-- ==========================================
+    <!-- ==========================================
        WELCOME / SUMMARY SECTION
        ========================================== -->
-  <section class="py-20 md:py-32 bg-white relative" id="home-welcome">
-    <div class="w-full max-w-[1280px] mx-auto px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
-        <div class="order-1">
-          <div class="mb-14 text-left relative">
-            <span class="font-title text-primary text-[0.9rem] font-bold uppercase tracking-[3px] mb-3 inline-block">Corporate Overview</span>
-            <h2 class="section-title left-aligned">turnkey general contracting with vertical integration</h2>
-          </div>
-          <p class="text-[1.25rem] font-medium text-primary border-l-4 border-accent pl-6 mb-8 font-title">
-            For over three decades, Megra has executed complex structural projects with absolute control over our materials and services supply chain.
-          </p>
-          <p class="text-text-muted mb-6 text-[1.05rem]">
-            By managing our own subsidiaries—including structural steel fabrication, block masonry, ready-mix concrete plants, high-performance glazing, and MEP specialists—we insulate project timelines from external supply delays.
-          </p>
-          <a href="about.html" class="btn btn-primary mt-4 w-full sm:w-auto">More About Us <i class="fas fa-arrow-right btn-icon"></i></a>
-        </div>
-        
-        <div class="about-stats grid grid-cols-1 sm:grid-cols-2 gap-8 order-2" id="stats-container">
-          <div class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
-            <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number" data-target="1989">0</span>
-            <span class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Year Founded</span>
-          </div>
-          <div class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
-            <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number" data-target="350" data-suffix="+">0</span>
-            <span class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Completed Projects</span>
-          </div>
-          <div class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
-            <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number" data-target="15000" data-suffix="+">0</span>
-            <span class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Experts Employed</span>
-          </div>
-          <div class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
-            <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number" data-target="12" data-suffix="+">0</span>
-            <span class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Subsidiaries</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    <section class="py-20 md:py-32 bg-white relative" id="home-welcome">
+        <div class="w-full max-w-[1280px] mx-auto px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+                <div class="order-1">
+                    <div class="mb-14 text-left relative">
+                        <span
+                            class="font-title text-primary text-[0.9rem] font-bold uppercase tracking-[3px] mb-3 inline-block">Corporate
+                            Overview</span>
+                        <h2 class="section-title left-aligned">turnkey general contracting with vertical integration
+                        </h2>
+                    </div>
+                    <p class="text-[1.25rem] font-medium text-primary border-l-4 border-accent pl-6 mb-8 font-title">
+                        For over three decades, Megra has executed complex structural projects with absolute control
+                        over our materials and services supply chain.
+                    </p>
+                    <p class="text-text-muted mb-6 text-[1.05rem]">
+                        By managing our own subsidiaries—including structural steel fabrication, block masonry,
+                        ready-mix concrete plants, high-performance glazing, and MEP specialists—we insulate project
+                        timelines from external supply delays.
+                    </p>
+                    <a href="about.html" class="btn btn-primary mt-4 w-full sm:w-auto">More About Us <i
+                            class="fas fa-arrow-right btn-icon"></i></a>
+                </div>
 
-  <!-- ==========================================
+                <div class="about-stats grid grid-cols-1 sm:grid-cols-2 gap-8 order-2" id="stats-container">
+                    <div
+                        class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
+                        <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number"
+                            data-target="1989">0</span>
+                        <span
+                            class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Year
+                            Founded</span>
+                    </div>
+                    <div
+                        class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
+                        <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number"
+                            data-target="350" data-suffix="+">0</span>
+                        <span
+                            class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Completed
+                            Projects</span>
+                    </div>
+                    <div
+                        class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
+                        <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number"
+                            data-target="15000" data-suffix="+">0</span>
+                        <span
+                            class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Experts
+                            Employed</span>
+                    </div>
+                    <div
+                        class="bg-bg-light p-10 rounded-lg border-b-4 border-border transition-all duration-400 text-center hover:-translate-y-2 hover:border-primary hover:bg-primary-ultraLight hover:shadow-md">
+                        <span class="font-title text-[3rem] font-extrabold text-primary mb-2 block stat-number"
+                            data-target="12" data-suffix="+">0</span>
+                        <span
+                            class="font-title font-semibold text-[0.9rem] text-secondary-dark uppercase tracking-wider">Subsidiaries</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
        CTA FEATURE
        ========================================== -->
-  <section class="bg-primary text-white relative overflow-hidden py-24" id="home-cta">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.25)_0%,transparent_50%)] pointer-events-none"></div>
-    <div class="w-full max-w-[1280px] mx-auto px-8 relative z-10">
-      <div class="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 lg:gap-20 items-center">
-        <div>
-          <h2 class="text-white text-3xl md:text-[2.8rem] font-extrabold mb-6 leading-tight">Ready to Build the Future?</h2>
-          <p class="text-[1.1rem] text-white/85">
-            Whether it is high-rise commercial structures, social infrastructure facilities, heavy industrial plants, or custom-fit project finance configurations—our turnkey team is equipped to deliver.
-          </p>
+    <section class="bg-primary text-white relative overflow-hidden py-24" id="home-cta">
+        <div
+            class="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(212,175,55,0.25)_0%,transparent_50%)] pointer-events-none">
         </div>
-        <div class="flex justify-center lg:justify-end items-center">
-          <a href="contact.html" class="btn btn-accent w-full sm:w-auto px-12 py-5 text-center text-lg">Submit Project Enquiry <i class="fas fa-paper-plane btn-icon"></i></a>
+        <div class="w-full max-w-[1280px] mx-auto px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-[1.3fr_0.7fr] gap-12 lg:gap-20 items-center">
+                <div>
+                    <h2 class="text-white text-3xl md:text-[2.8rem] font-extrabold mb-6 leading-tight">Ready to Build
+                        the Future?</h2>
+                    <p class="text-[1.1rem] text-white/85">
+                        Whether it is high-rise commercial structures, social infrastructure facilities, heavy
+                        industrial plants, or custom-fit project finance configurations—our turnkey team is equipped to
+                        deliver.
+                    </p>
+                </div>
+                <div class="flex justify-center lg:justify-end items-center">
+                    <a href="contact.html" class="btn btn-accent w-full sm:w-auto px-12 py-5 text-center text-lg">Submit
+                        Project Enquiry <i class="fas fa-paper-plane btn-icon"></i></a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ==========================================
+    <!-- ==========================================
        FOOTER
        ========================================== -->
-  <footer class="bg-bg-dark text-text-light pt-24 pb-8 border-t-4 border-accent">
-    <div class="w-full max-w-[1280px] mx-auto px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.5fr] gap-16 mb-20">
-        <div>
-          <img src="images/logo.png" alt="Megra Logo" class="h-12 w-auto" id="footer-brand-logo">
-          <p class="text-white/60 mt-6 mb-8 text-[0.95rem] leading-relaxed">
-            Megra is a vertically integrated construction conglomerate based in Dubai, UAE. We deliver iconic skyscrapers, stadiums, and infrastructure setups with integrated turnkey efficiency.
-          </p>
-          <div class="flex gap-4">
-            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          </div>
-        </div>
+    <footer class="bg-bg-dark text-text-light pt-24 pb-8 border-t-4 border-accent">
+        <div class="w-full max-w-[1280px] mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.5fr] gap-16 mb-20">
+                <div>
+                    <img src="images/logo.png" alt="Megra Logo" class="h-12 w-auto" id="footer-brand-logo">
+                    <p class="text-white/60 mt-6 mb-8 text-[0.95rem] leading-relaxed">
+                        Megra is a vertically integrated construction conglomerate based in Dubai, UAE. We deliver
+                        iconic skyscrapers, stadiums, and infrastructure setups with integrated turnkey efficiency.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]"
+                            aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]"
+                            aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]"
+                            aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-text-light flex items-center justify-center transition-smooth hover:bg-primary hover:border-primary hover:text-white hover:-translate-y-[3px]"
+                            aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
 
-        <div>
-          <h4 class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">Our Company</h4>
-          <div class="flex flex-col gap-4">
-            <a href="about.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">About Us</a>
-            <a href="services.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Services & Expertise</a>
-            <a href="portfolio.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Project Showcase</a>
-            <a href="contact.html" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Contact Us</a>
-          </div>
-        </div>
+                <div>
+                    <h4
+                        class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">
+                        Our Company</h4>
+                    <div class="flex flex-col gap-4">
+                        <a href="about.html"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">About
+                            Us</a>
+                        <a href="services.html"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Services
+                            & Expertise</a>
+                        <a href="portfolio.html"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Project
+                            Showcase</a>
+                        <a href="contact.html"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Contact
+                            Us</a>
+                    </div>
+                </div>
 
-        <div>
-          <h4 class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">Business Units</h4>
-          <div class="flex flex-col gap-4">
-            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Megra Steel</a>
-            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Megra Ready-Mix</a>
-            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">MEP Services</a>
-            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Bespoke Fit-Out</a>
-            <a href="services.html#integration" class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Facade Glazing</a>
-          </div>
-        </div>
+                <div>
+                    <h4
+                        class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">
+                        Business Units</h4>
+                    <div class="flex flex-col gap-4">
+                        <a href="services.html#integration"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Megra
+                            Steel</a>
+                        <a href="services.html#integration"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Megra
+                            Ready-Mix</a>
+                        <a href="services.html#integration"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">MEP
+                            Services</a>
+                        <a href="services.html#integration"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Bespoke
+                            Fit-Out</a>
+                        <a href="services.html#integration"
+                            class="text-white/65 text-[0.92rem] transition-smooth hover:text-accent hover:translate-x-1.5">Facade
+                            Glazing</a>
+                    </div>
+                </div>
 
-        <div>
-          <h4 class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">Corporate Newsletter</h4>
-          <p class="text-white/60 text-[0.92rem] mb-6 leading-relaxed">Subscribe to receive quarterly insights, news updates, and completed project briefs.</p>
-          <form class="flex rounded overflow-hidden border border-white/10" action="#" onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
-            <input type="email" class="flex-grow bg-white/[0.03] px-5 py-3 text-white text-[0.9rem] outline-none placeholder:text-white/30" placeholder="Your Email Address" required aria-label="Email for Newsletter">
-            <button type="submit" class="bg-primary text-white px-6 transition-colors duration-200 hover:bg-primary-light flex items-center justify-center" aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
-          </form>
-        </div>
-      </div>
+                <div>
+                    <h4
+                        class="text-white text-[1.1rem] font-semibold mb-8 font-title relative pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-[30px] after:h-[2px] after:bg-accent">
+                        Corporate Newsletter</h4>
+                    <p class="text-white/60 text-[0.92rem] mb-6 leading-relaxed">Subscribe to receive quarterly
+                        insights, news updates, and completed project briefs.</p>
+                    <form class="flex rounded overflow-hidden border border-white/10" action="#"
+                        onsubmit="event.preventDefault(); alert('Subscribed to Newsletter!'); this.reset();">
+                        <input type="email"
+                            class="flex-grow bg-white/[0.03] px-5 py-3 text-white text-[0.9rem] outline-none placeholder:text-white/30"
+                            placeholder="Your Email Address" required aria-label="Email for Newsletter">
+                        <button type="submit"
+                            class="bg-primary text-white px-6 transition-colors duration-200 hover:bg-primary-light flex items-center justify-center"
+                            aria-label="Subscribe"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
 
-      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-        <p class="text-[0.85rem] text-white/50">&copy; 2026 Megra. All Rights Reserved. Designed with Megra Brand Aesthetics.</p>
-        <div class="flex gap-8">
-          <a href="#" class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Privacy Policy</a>
-          <a href="#" class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Terms &amp; Conditions</a>
-          <a href="#" class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Sitemap</a>
+            <div
+                class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
+                <p class="text-[0.85rem] text-white/50">&copy; 2026 Megra. All Rights Reserved.</p>
+                <div class="flex gap-8">
+                    <a href="#"
+                        class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Privacy
+                        Policy</a>
+                    <a href="#"
+                        class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Terms
+                        &amp; Conditions</a>
+                    <a href="#"
+                        class="text-[0.85rem] text-white/50 transition-colors duration-200 hover:text-accent">Sitemap</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-  <!-- JavaScript Main Logic -->
-  <script src="js/main.js"></script>
+    <!-- JavaScript Main Logic -->
+    <script src="js/main.js"></script>
 </body>
+
 </html>
