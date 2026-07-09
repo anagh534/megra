@@ -1,5 +1,5 @@
 /* ----------------------------------------------------
-   ASGC Group Inspired Website JavaScript
+   Megra Inspired Website JavaScript
    Logic for carousel, stats counters, portfolio filtering,
    lightbox, office tabs, sticky nav, and interactive forms.
 ---------------------------------------------------- */
@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'mbr-library': {
       title: 'Mohammed Bin Rashid Library',
       tag: 'Culture & Education',
-      desc: 'An architectural masterpiece shaped like an open book, the Mohammed Bin Rashid Library stands as a beacon of culture and knowledge in Dubai. Built by ASGC, this iconic structural landmark spans over 54,000 square meters, featuring modern sustainable systems, high-capacity climate control for rare manuscript storage, and state-of-the-art digital reading spaces.',
+      desc: 'An architectural masterpiece shaped like an open book, the Mohammed Bin Rashid Library stands as a beacon of culture and knowledge in Dubai. Built by Megra, this iconic structural landmark spans over 54,000 square meters, featuring modern sustainable systems, high-capacity climate control for rare manuscript storage, and state-of-the-art digital reading spaces.',
       image: 'images/project_1.jpg',
       sector: 'Cultural Infrastructure',
       client: 'Dubai Municipality',
@@ -217,7 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'cola-arena': {
       title: 'Coca-Cola Arena',
       tag: 'Hospitality & Leisure',
-      desc: 'A state-of-the-art multipurpose indoor arena located in the heart of City Walk, Dubai. Capable of hosting international music concerts, sporting events, and corporate banquets, this mega-structure features a dynamic, fully custom LED facade, modular seating layouts, and a massive structural steel roof span, all successfully completed by ASGC on a turnkey basis.',
+      desc: 'A state-of-the-art multipurpose indoor arena located in the heart of City Walk, Dubai. Capable of hosting international music concerts, sporting events, and corporate banquets, this mega-structure features a dynamic, fully custom LED facade, modular seating layouts, and a massive structural steel roof span, all successfully completed by Megra on a turnkey basis.',
       image: 'images/project_2.jpg',
       sector: 'Leisure & Entertainment',
       client: 'Meraas Development',
@@ -227,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'expo-pavilion': {
       title: 'Expo 2020 Sustainability Pavilion',
       tag: 'Sustainability / Commercial',
-      desc: 'Completed as part of the historic Dubai Expo 2020, the Sustainability Pavilion (Terra) is a pioneering net-zero energy and water building. Featuring a massive 130-meter-wide canopy covered in solar panels and surrounded by energy-generating "Water Trees", this landmark highlights ASGC\'s top-tier sustainable construction capabilities.',
+      desc: 'Completed as part of the historic Dubai Expo 2020, the Sustainability Pavilion (Terra) is a pioneering net-zero energy and water building. Featuring a massive 130-meter-wide canopy covered in solar panels and surrounded by energy-generating "Water Trees", this landmark highlights Megra\'s top-tier sustainable construction capabilities.',
       image: 'images/project_3.jpg',
       sector: 'Sustainable Architecture',
       client: 'Expo 2020 Dubai',
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'bluewaters': {
       title: 'Bluewaters Residences',
       tag: 'Commercial & Residential',
-      desc: 'ASGC completed the construction of multiple high-end residential towers, townhouse complexes, and supporting community infrastructure on the man-made Bluewaters Island. These luxury residences combine high-performance structural glazing, bespoke fit-out works, and integrated smart home automation systems for an elite waterfront lifestyle.',
+      desc: 'Megra completed the construction of multiple high-end residential towers, townhouse complexes, and supporting community infrastructure on the man-made Bluewaters Island. These luxury residences combine high-performance structural glazing, bespoke fit-out works, and integrated smart home automation systems for an elite waterfront lifestyle.',
       image: 'images/project_4.jpg',
       sector: 'Residential Real Estate',
       client: 'Meraas Holding',
@@ -247,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'metro-expansion': {
       title: 'Dubai Metro Expansion',
       tag: 'Infrastructure & Transport',
-      desc: 'ASGC played an instrumental role in executing structural expansions, bridge link ways, and transit facilities for key stations of the Dubai Metro system. Operating under stringent safety protocols and without interrupting daily commuter transit routes, this project stands as a testament to our heavy infrastructure excellence.',
+      desc: 'Megra played an instrumental role in executing structural expansions, bridge link ways, and transit facilities for key stations of the Dubai Metro system. Operating under stringent safety protocols and without interrupting daily commuter transit routes, this project stands as a testament to our heavy infrastructure excellence.',
       image: 'images/project_5.jpg',
       sector: 'Public Infrastructure',
       client: 'Roads & Transport Authority (RTA)',
@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', () => {
     'etihad-museum': {
       title: 'Etihad Museum',
       tag: 'Culture & Education',
-      desc: 'Located at the historic site where the union of the United Arab Emirates was signed in 1971, the Etihad Museum features a striking architectural design resembling a manuscript scroll. ASGC executed this complex underground and curved structure, installing high-fidelity fit-out and interactive museum exhibition designs.',
+      desc: 'Located at the historic site where the union of the United Arab Emirates was signed in 1971, the Etihad Museum features a striking architectural design resembling a manuscript scroll. Megra executed this complex underground and curved structure, installing high-fidelity fit-out and interactive museum exhibition designs.',
       image: 'images/project_6.jpg',
       sector: 'Heritage & Culture',
       client: 'Dubai Culture & Arts Authority',
