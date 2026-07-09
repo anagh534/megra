@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Simulate loading state
       submitBtn.disabled = true;
-      submitBtn.innerHTML = 'Sending Application <i class="fas fa-spinner fa-spin btn-icon"></i>';
+      submitBtn.innerHTML = 'Sending Inquiry <i class="fas fa-spinner fa-spin btn-icon"></i>';
       
       setTimeout(() => {
         // Successful message animation
@@ -378,11 +378,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="success-icon-box" style="width: 80px; height: 80px; border-radius: 50%; background-color: var(--color-primary-ultra-light); color: var(--color-primary); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; font-size: 2.5rem; box-shadow: 0 0 20px rgba(33, 101, 54, 0.15);">
               <i class="fas fa-check"></i>
             </div>
-            <h3 style="color: var(--color-primary-dark); margin-bottom: 0.75rem; font-family: var(--font-title); font-weight: 700; font-size: 1.5rem;">Application Submitted</h3>
-            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 320px; margin: 0 auto 2rem auto;">
-              Thank you for expressing interest in joining ASGC Group. Our Talent Acquisition team will review your profile and get back to you shortly.
+            <h3 style="color: var(--color-primary-dark); margin-bottom: 0.75rem; font-family: var(--font-title); font-weight: 700; font-size: 1.5rem;">Inquiry Submitted</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6; max-width: 350px; margin: 0 auto 2rem auto;">
+              Thank you for submitting your inquiry. MEGRA Engineering Solutions team will review your request and get back to you shortly.
             </p>
-            <button class="btn btn-outline" onclick="window.location.reload();">Submit Another Form</button>
+            <button class="btn btn-outline" onclick="window.location.reload();">Submit Another Inquiry</button>
           </div>
         `;
       }, 1800);
