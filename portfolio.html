@@ -130,6 +130,15 @@
       .header.scrolled {
         @apply bg-white shadow-md border-b border-border h-[80px];
       }
+      .header.scrolled #brand-logo {
+        @apply h-[64px];
+      }
+      .header.scrolled #brand-logo-link {
+        @apply max-h-[72px];
+      }
+      .header.scrolled .nav-menu {
+        @apply top-[80px] h-[calc(100vh-80px)];
+      }
       
       .nav-link {
         @apply font-title font-semibold text-[0.9rem] text-white md:text-secondary-dark uppercase tracking-[1px] py-2 relative  block; transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
@@ -311,16 +320,16 @@
        HEADER & NAVIGATION
        ========================================== -->
   <header
-    class="header subpage fixed top-0 left-0 w-full h-[80px] z-[1000] flex items-center bg-white/95 shadow-sm backdrop-blur-md border-b border-border transition-smooth"
+    class="header subpage fixed top-0 left-0 w-full h-[96px] z-[1000] flex items-center bg-white/95 shadow-sm backdrop-blur-md border-b border-border transition-smooth"
     id="main-header">
     <div class="w-full max-w-[1280px] mx-auto px-8 flex items-center justify-between">
-      <a href="index.html" class="flex items-center max-h-[72px]" id="brand-logo-link">
-        <img src="images/logo.png" alt="Megra Logo" class="h-[64px] w-auto object-contain transition-smooth"
+      <a href="index.html" class="flex items-center max-h-[88px]" id="brand-logo-link">
+        <img src="images/logo.png" alt="Megra Logo" class="h-[80px] w-auto object-contain transition-smooth"
           id="brand-logo">
       </a>
 
       <nav
-        class="nav-menu flex items-center gap-8 md:flex-row md:static md:w-auto md:h-auto md:bg-transparent md:gap-8 fixed top-[80px] left-[-100%] w-full h-[calc(100vh-80px)] bg-bg-darkGray flex-col justify-center transition-smooth z-[999]"
+        class="nav-menu flex items-center gap-8 md:flex-row md:static md:w-auto md:h-auto md:bg-transparent md:gap-8 fixed top-[96px] left-[-100%] w-full h-[calc(100vh-96px)] bg-bg-darkGray flex-col justify-center transition-smooth z-[999]"
         id="navigation-menu">
         <a href="index.html" class="nav-link nav-item-link">Home</a>
         <a href="about.html" class="nav-link nav-item-link">About Us</a>
@@ -345,7 +354,7 @@
   <!-- ==========================================
        SUBPAGE BANNER
        ========================================== -->
-  <section class="h-[380px] bg-bg-dark relative flex items-center overflow-hidden text-white pt-[80px]"
+  <section class="h-[380px] bg-bg-dark relative flex items-center overflow-hidden text-white pt-[96px]"
     id="portfolio-banner">
     <div class="absolute top-0 left-0 w-full h-full bg-cover bg-center opacity-25 filter grayscale-[20%] page-banner-bg"
       style="background-image: url('images/hero_1.jpg');"></div>
